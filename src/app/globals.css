@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.hero-overlay {
+    @layer daisyui.l1.l2.l3 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        height: 100%;
+        width: 100%;
+        background-color: color-mix(in oklab, var(--color-neutral) /* var(--color-neutral) */ 70%, transparent);
+    }
+}
