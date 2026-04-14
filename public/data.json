@@ -382,6 +382,7 @@
         },
         {
             "id": "food_009",
+            "category":"salad",
             "dish_name": "Shrimp Salad Bowl with Fresh Vegetables",
             "alternative_names": [
                 "Grilled Shrimp Cucumber Tomato Salad",

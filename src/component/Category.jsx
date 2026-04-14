@@ -8,15 +8,21 @@ const nunito = Nunito({
 });
 const Category = async () => {
     let data = await getCategory()
-    console.log(data);
+    let filt =  [...new Set(data.filter(item => item.category!=="dish"))];
     
     return (
-        <div>
+        <div className='mt-10'>
             <h1 className={`${nunito.className} text-4xl my-5 font-bold text-center`}>Popular Categories</h1>
-            <div className='flex flex-wrap'>
-                {data.slice(0,6).map(cat=>{
+            <div className='grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6  grid-cols-2 w-[90%] m-auto gap-5'>
+                {filt.slice(0,6).map(cat=>{
+                    if (cat.id==="food_009") {
+                        cat.category="Salad"
+                    }
                     return(
-                        <Image  loading="eager" src={cat.image_link} key={cat.id} width={300} height={300} alt={cat.category} />
+                        <div key={cat.id} className='flex flex-col justify-between shadow shadow-green-300 p-3 rounded-2xl' >
+                            <Image src={cat.image_link} width={200} height={250} alt={cat.dish_name} />
+                            <h3 className={` ${nunito.className} text-center capitalize font-bold  sm:text-sm md:text-3xl text-xl lg:text-4xl `}>{cat.category}</h3>
+                        </div>
                     )
                 })}
             </div>

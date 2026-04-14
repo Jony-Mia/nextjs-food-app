@@ -12,7 +12,7 @@ const poppins = Poppins({
 const Hero = () => {
     return (
         <div
-            className="hero min-h-[90vh]"
+            className="hero min-h-[94vh]"
             style={{
                 backgroundImage:
                     "url(https://foodsforhealth.osu.edu/sites/default/files/styles/widescreen_large/public/media/image/2025/01/adobestock_896621400.jpg)",
@@ -20,7 +20,7 @@ const Hero = () => {
         >
             <div className="hero-overlay"></div>
             <div className="hero-content text-neutral-content ">
-                <div className='grid grid-cols-2 gap-4 items-center '>
+                <div className='grid md:grid-cols-2 gap-4 items-center grid-cols-1 '>
                     <div>
                         <h1 className={`${nunito.className} font-bold text-5xl`}>
                             Enjoy our enlighten dishh

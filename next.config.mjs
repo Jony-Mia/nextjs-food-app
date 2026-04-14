@@ -23,13 +23,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
         port: '',
-        pathname: '/dj493l0jy/image/upload/**',
+        pathname: '/**',
         search: '',
       },
     ],
   },
 }
-// https://foodsforhealth.osu.edu/sites/default/files/styles/widescreen_large/public/media/image/2025/01/adobestock_896621400.jpg
 
-//wp-content/uploads/2021/07/thalimeal2-1-1024x1024.jpg
 export default nextConfig;

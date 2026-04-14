@@ -15,26 +15,23 @@ const Nabvar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        <li><Link className={`${pathName === "/" ? ' bg-green-600' : ""}`} href="/">Home</Link></li>
+                        <li><Link className={`${pathName === "/about" ? ' bg-green-600' : ""}`} href={"/about"}>About</Link></li>
+                        <li><Link className={`${pathName === "/service" ? ' bg-green-600' : ""}`} href={"/service"}>service</Link></li>
+                        <li><Link className={`${pathName === "/worker" ? ' bg-green-600' : ""}`} href={"/worker"}>Worker</Link></li>
+                        <li><Link className={`${pathName === "/blog" ? ' bg-green-600' : ""}`} href={"/blog"}>Blog</Link></li>
+
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">Sahi Dish</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal gap-3.5 px-1">
-                    <li><Link className={`${pathName==="/"?' bg-green-600':""}`} href="/">Home</Link></li>
-                    <li><Link className={`${pathName==="/about"?' bg-green-600':""}`} href={"/about"}>About</Link></li>
-                    <li><Link className={`${pathName==="/service"?' bg-green-600':""}`} href={"/service"}>service</Link></li>
-                    <li><Link className={`${pathName==="/worker"?' bg-green-600':""}`} href={"/worker"}>Worker</Link></li>
-                    <li><Link className={`${pathName==="/blog"?' bg-green-600':""}`} href={"/blog"}>Blog</Link></li>
+                    <li><Link className={`${pathName === "/" ? ' bg-green-600' : ""}`} href="/">Home</Link></li>
+                    <li><Link className={`${pathName === "/about" ? ' bg-green-600' : ""}`} href={"/about"}>About</Link></li>
+                    <li><Link className={`${pathName === "/service" ? ' bg-green-600' : ""}`} href={"/service"}>service</Link></li>
+                    <li><Link className={`${pathName === "/worker" ? ' bg-green-600' : ""}`} href={"/worker"}>Worker</Link></li>
+                    <li><Link className={`${pathName === "/blog" ? ' bg-green-600' : ""}`} href={"/blog"}>Blog</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
